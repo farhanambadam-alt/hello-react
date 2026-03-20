@@ -115,7 +115,7 @@ export function useFlutterBridge() {
     };
 
     window.appBack = () => {
-      if (routeStack.length <= 1) {
+      if (!routeStack || routeStack.length <= 1) {
         try {
           window.flutter_inappwebview?.callHandler('exitApp');
         } catch {
@@ -124,23 +124,12 @@ export function useFlutterBridge() {
         return;
       }
 
-      const current = routeStack.pop();
-      const previous = routeStack[routeStack.length - 1];
+      routeStack.pop();
+      const previousRoute = routeStack[routeStack.length - 1];
 
-      if (!previous || previous === current) {
-        routeStack.length = 0;
-        routeStack.push(current || '/');
-        try {
-          window.flutter_inappwebview?.callHandler('exitApp');
-        } catch {
-          /* bridge not ready */
-        }
-        return;
-      }
-
-      navigateRef.current(previous, { replace: true });
+      navigateRef.current(previousRoute, { replace: true });
       try {
-        window.flutter_inappwebview?.callHandler('routeChanged', previous);
+        window.flutter_inappwebview?.callHandler('routeChanged', previousRoute);
       } catch {
         /* bridge not ready */
       }
