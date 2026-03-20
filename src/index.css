@@ -1,0 +1,558 @@
+/* Self-hosted fonts — no external requests */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/fonts/dm-sans-latin-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/fonts/dm-sans-latin-ext-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/dm-sans-latin-italic.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-latin-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-latin-ext-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-latin-italic.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-latin-ext-italic.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-latin-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-latin-ext-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Flutter WebView CSS Reset ── */
+::-webkit-scrollbar { display: none; }
+* {
+  scrollbar-width: none;
+  -webkit-tap-highlight-color: transparent;
+}
+img {
+  -webkit-user-drag: none;
+}
+
+/* ── Hybrid Safe Area System ── */
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+
+  --flutter-top: 0px;
+  --flutter-bottom: 0px;
+  --flutter-left: 0px;
+  --flutter-right: 0px;
+
+  --inset-top: max(var(--safe-top), var(--flutter-top));
+  --inset-bottom: max(var(--safe-bottom), var(--flutter-bottom));
+  --inset-left: max(var(--safe-left), var(--flutter-left));
+  --inset-right: max(var(--safe-right), var(--flutter-right));
+}
+
+@layer base {
+  /* ── Default (neutral) ── */
+  :root {
+    --background: 30 12% 96%;
+    --foreground: 220 20% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 14%;
+
+    --primary: 220 18% 22%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 30 10% 93%;
+    --secondary-foreground: 220 20% 14%;
+
+    --muted: 30 8% 94%;
+    --muted-foreground: 220 8% 50%;
+
+    --accent: 24 70% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 60% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 152 50% 42%;
+    --success-foreground: 0 0% 98%;
+
+    --border: 220 10% 91%;
+    --input: 220 10% 91%;
+    --ring: 220 18% 22%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --font-heading: 'DM Sans', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+    --champagne: 30 42% 94%;
+    --bronze: 18 18% 51%;
+    --truffle: 13 27% 14%;
+
+    --shadow-card: 0 2px 12px -3px hsl(220 15% 20% / 0.06);
+    --shadow-card-hover: 0 8px 24px -4px hsl(220 15% 20% / 0.1);
+    --shadow-bottom-bar: 0 -1px 12px -2px hsl(220 15% 20% / 0.06);
+    --border-subtle: hsl(220 10% 91% / 0.5);
+
+    --btn-gradient: linear-gradient(135deg, hsl(220 18% 22%), hsl(220 24% 32%));
+    --btn-shadow: 0 4px 14px -3px hsl(220 18% 22% / 0.4);
+    --btn-glow: hsl(220 18% 22% / 0.25);
+  }
+
+  .dark {
+    --background: 220 16% 7%;
+    --foreground: 30 10% 92%;
+    --card: 220 14% 11%;
+    --card-foreground: 30 10% 92%;
+    --popover: 220 14% 11%;
+    --popover-foreground: 30 10% 92%;
+    --primary: 220 20% 65%;
+    --primary-foreground: 220 16% 7%;
+    --secondary: 220 12% 16%;
+    --secondary-foreground: 30 10% 92%;
+    --muted: 220 10% 14%;
+    --muted-foreground: 30 6% 55%;
+    --accent: 24 60% 58%;
+    --accent-foreground: 30 10% 92%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 10% 18%;
+    --input: 220 10% 18%;
+    --ring: 220 20% 65%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* ── Men: sleek, cool, navy/charcoal ── */
+  :root[data-gender="male"]:not(.dark) {
+    --background: 216 14% 96%;
+    --foreground: 216 28% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 216 28% 12%;
+    --primary: 216 52% 24%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 216 12% 92%;
+    --secondary-foreground: 216 28% 12%;
+    --muted: 216 8% 93%;
+    --muted-foreground: 216 10% 48%;
+    --accent: 24 85% 52%;
+    --accent-foreground: 0 0% 100%;
+    --border: 216 10% 89%;
+    --input: 216 10% 89%;
+    --ring: 216 52% 24%;
+    --champagne: 216 14% 94%;
+    --bronze: 216 14% 48%;
+    --truffle: 216 22% 12%;
+    --btn-gradient: linear-gradient(135deg, hsl(216 60% 42%), hsl(210 70% 54%));
+    --btn-shadow: 0 4px 16px -3px hsl(216 60% 42% / 0.45);
+    --btn-glow: hsl(210 70% 54% / 0.3);
+  }
+
+  /* ── Women: warm, soft blush, rose-gold ── */
+  :root[data-gender="female"]:not(.dark) {
+    --background: 20 18% 96%;
+    --foreground: 350 18% 14%;
+    --card: 20 20% 99%;
+    --card-foreground: 350 18% 14%;
+    --primary: 350 32% 30%;
+    --primary-foreground: 20 20% 98%;
+    --secondary: 20 14% 93%;
+    --secondary-foreground: 350 18% 14%;
+    --muted: 20 10% 94%;
+    --muted-foreground: 350 8% 48%;
+    --accent: 18 55% 60%;
+    --accent-foreground: 0 0% 100%;
+    --border: 20 12% 90%;
+    --input: 20 12% 90%;
+    --ring: 350 32% 30%;
+    --champagne: 20 24% 95%;
+    --bronze: 350 14% 52%;
+    --truffle: 350 18% 14%;
+    --btn-gradient: linear-gradient(135deg, hsl(340 45% 42%), hsl(350 55% 55%));
+    --btn-shadow: 0 4px 16px -3px hsl(340 45% 42% / 0.45);
+    --btn-glow: hsl(350 55% 55% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body, #root {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  html {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    overscroll-behavior-y: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.01em;
+  }
+
+  /* Focus-visible styles for keyboard navigation */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary rounded-lg;
+  }
+
+  /* Remove default tap highlight + native tactile feedback */
+  button, a, [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  button:active, a:active, [role="button"]:active {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+
+  /* Allow text selection in inputs/textareas */
+  input, textarea, [contenteditable="true"] {
+    user-select: text;
+    -webkit-user-select: text;
+  }
+
+  /* Skip to content link (visually hidden) */
+  .sr-only:focus {
+    @apply not-sr-only;
+  }
+}
+
+@layer utilities {
+  .skeleton-shimmer {
+    @apply relative overflow-hidden;
+    background: hsl(var(--muted));
+  }
+  .skeleton-shimmer::after {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(90deg, transparent, hsl(var(--background) / 0.5), transparent);
+    animation: shimmer 1.5s infinite;
+  }
+
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+  .card-shadow-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .btn-themed {
+    background: var(--btn-gradient);
+    box-shadow: var(--btn-shadow);
+    color: hsl(0 0% 100%);
+    transition: box-shadow 0.2s ease, filter 0.2s ease, transform 0.2s ease;
+  }
+  .btn-themed:hover {
+    box-shadow: 0 6px 20px -3px var(--btn-glow);
+    filter: brightness(1.08);
+  }
+  .btn-themed:active {
+    transform: scale(0.96);
+    filter: brightness(0.97);
+  }
+
+  /* Safe-area-aware bottom padding for pages with bottom nav */
+  .pb-safe {
+    padding-bottom: calc(var(--inset-bottom) + 80px);
+  }
+
+  /* CSS animations for background dots/sparkles — replaces SVG <animate> */
+  .bg-dot {
+    animation: dot-pulse infinite ease-in-out;
+  }
+  .bg-sparkle {
+    animation: sparkle-pulse infinite ease-in-out;
+  }
+
+  .animate-twinkle {
+    animation: twinkle linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-dot, .bg-sparkle {
+    animation: none !important;
+  }
+}
+
+@keyframes dot-pulse {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.65; }
+}
+
+@keyframes sparkle-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.85; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes caret-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Miracle search bar placeholder */
+.miracle-search input::placeholder {
+  color: rgba(255, 247, 237, 0.4);
+  font-style: italic;
+}
+
+@keyframes elastic-line {
+  0%   { transform: scaleX(1); }
+  25%  { transform: scaleX(1.6); }
+  50%  { transform: scaleX(0.85); }
+  70%  { transform: scaleX(1.1); }
+  85%  { transform: scaleX(0.97); }
+  100% { transform: scaleX(1); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slide-up {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cart-pill-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@keyframes icon-bump {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.22); }
+  70% { transform: scale(1.08); }
+  100% { transform: scale(1.12); }
+}
+
+@keyframes jelly {
+  0% { transform: scale(1, 1); }
+  20% { transform: scale(1.12, 0.88); }
+  40% { transform: scale(0.88, 1.1); }
+  55% { transform: scale(1.06, 0.94); }
+  70% { transform: scale(0.97, 1.03); }
+  85% { transform: scale(1.01, 0.99); }
+  100% { transform: scale(1, 1); }
+}
+
+@keyframes jelly-container {
+  0% { transform: scaleY(1) scaleX(1); }
+  15% { transform: scaleY(0.97) scaleX(1.01); }
+  30% { transform: scaleY(1.02) scaleX(0.99); }
+  45% { transform: scaleY(0.99) scaleX(1.005); }
+  60% { transform: scaleY(1.005) scaleX(0.998); }
+  80% { transform: scaleY(0.999) scaleX(1.001); }
+  100% { transform: scaleY(1) scaleX(1); }
+}
+
+@keyframes jelly-avatar {
+  0%   { transform: scale(1); }
+  20%  { transform: scale(1.15, 0.88); }
+  40%  { transform: scale(0.92, 1.08); }
+  55%  { transform: scale(1.05, 0.96); }
+  70%  { transform: scale(0.98, 1.02); }
+  85%  { transform: scale(1.01, 0.99); }
+  100% { transform: scale(1); }
+}
+
+/* Hide scrollbar for horizontal scroll areas */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Instagram native-look embed system ── */
+
+/* The outer card — sets aspect ratio and clips everything */
+.ig-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: hsl(var(--secondary));
+}
+
+/* Inner viewport — clips the scaler */
+.ig-viewport {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Scaler — positioned to push IG chrome out of sight (thumb mode) */
+.ig-scaler {
+  position: absolute;
+  top: calc(var(--crop-top, 60px) * -1);
+  left: -5%;
+  width: 110%;
+  height: calc(100% + var(--crop-top, 60px) + var(--crop-bottom, 100px));
+  pointer-events: none;
+}
+
+/* Full mode — uses same cropping to hide IG chrome, but interactive */
+.ig-scaler--full {
+  position: absolute;
+  top: calc(var(--crop-top, 60px) * -1);
+  left: -5%;
+  width: 110%;
+  height: calc(100% + var(--crop-top, 60px) + var(--crop-bottom, 100px));
+  pointer-events: auto;
+}
+
+/* Full mode card — fills container with aspect-ratio set by parent */
+.ig-card--full {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+.ig-card--full .ig-viewport {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Force iframe inside to fill scaler height */
+iframe.instagram-media {
+  height: 100% !important;
+}
+
+/* Force the embed & iframe to fill the scaler */
+.instagram-media,
+iframe.instagram-media-rendered {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  display: block !important;
+  background: transparent !important;
+}
+
+/* Full-mode iframe fills scaler */
+.ig-scaler--full .instagram-media,
+.ig-scaler--full iframe.instagram-media-rendered {
+  width: 100% !important;
+  height: 100% !important;
+}
+.ig-scaler--full iframe.instagram-media {
+  height: 100% !important;
+}
